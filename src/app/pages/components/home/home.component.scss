@@ -76,30 +76,6 @@
   height: 5rem;
 }
 
-.btn-box .btn {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 15rem;
-  height: 100%;
-  background: var(--main-color);
-  border: 0.2rem solid var(--main-color);
-  border-radius: 0.8rem;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-  color: var(--bg-color);
-  z-index: 1;
-  overflow: hidden;
-  transition: 500ms;
-  cursor: pointer;
-}
-
-.btn-box .btn:hover {
-  color: var(--main-color);
-}
-
 .btn-box .btn:nth-child(2) {
   background: transparent;
   color: var(--main-color);
