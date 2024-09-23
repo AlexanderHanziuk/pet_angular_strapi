@@ -34,6 +34,17 @@ section {
   padding: 10rem 9% 2rem;
 }
 
+.heading {
+  position: relative;
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.heading span {
+  color: var(--main-color);
+}
+
 .btn-box {
   position: relative;
   display: flex;
