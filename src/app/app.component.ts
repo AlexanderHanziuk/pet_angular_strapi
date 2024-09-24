@@ -6,6 +6,7 @@ import { AboutComponent } from './pages/components/about/about.component';
 import { EducationComponent } from './pages/components/education/education.component';
 import { SkillsComponent } from './pages/components/skills/skills.component';
 import { ContactComponent } from './pages/components/contact/contact.component';
+import { FooterComponent } from './pages/components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { ContactComponent } from './pages/components/contact/contact.component';
     EducationComponent,
     SkillsComponent,
     ContactComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
