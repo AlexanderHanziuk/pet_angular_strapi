@@ -105,3 +105,17 @@
     padding: 10rem 4% 5rem 5%;
   }
 }
+
+.education .animate.scroll {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(300ms * var(--i));
+}
+
+.education .education-box .animate.scroll {
+  width: 105%;
+}
+
+.education.show-animate .animate.scroll {
+  transition-delay: calc(300ms * var(--i));
+  width: 0;
+}

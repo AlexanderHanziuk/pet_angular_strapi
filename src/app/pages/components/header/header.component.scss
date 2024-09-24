@@ -113,3 +113,10 @@
     transition-delay: 250ms;
   }
 }
+
+.logo .animate,
+.navbar .animate,
+#menu-icon .animate {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(300ms * var(--i));
+}

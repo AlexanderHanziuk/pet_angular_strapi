@@ -68,6 +68,16 @@
   background: var(--second-bg-color);
 }
 
+.about .animate.scroll {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(300ms * var(--i));
+}
+
+.about.show-animate .animate.scroll {
+  transition-delay: calc(300ms * var(--i));
+  width: 0;
+}
+
 @keyframes aboutSpinner {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);

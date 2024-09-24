@@ -173,3 +173,13 @@
     width: 100%;
   }
 }
+
+.contact .animate.scroll {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(300ms * var(--i));
+}
+
+.contact.show-animate .animate.scroll {
+  transition-delay: calc(300ms * var(--i));
+  width: 0;
+}

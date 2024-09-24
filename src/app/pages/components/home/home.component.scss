@@ -224,6 +224,15 @@
   }
 }
 
+.animate.home-img {
+  width: 50%;
+}
+
+.home.show-animate .animate {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(300ms * var(--i));
+}
+
 @keyframes homeBgText {
   0%,
   10%,

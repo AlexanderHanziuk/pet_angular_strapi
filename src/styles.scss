@@ -94,3 +94,29 @@ section {
     font-size: 50%;
   }
 }
+
+.animate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 98;
+}
+
+.animate.scroll {
+  transition: 1s ease;
+  transition-delay: calc(300ms / var(--i));
+  animation: none;
+}
+
+section:nth-child(odd) .animate.scroll {
+  background: var(--second-bg-color);
+}
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}

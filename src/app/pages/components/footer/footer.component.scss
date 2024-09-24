@@ -71,3 +71,14 @@
     text-align: center;
   }
 }
+
+.footer .animate.scroll {
+  animation: showRight 1s ease forwards;
+  animation-delay: calc(300ms * var(--i));
+  background: var(--second-bg-color);
+}
+
+.footer.show-animate .animate.scroll {
+  transition-delay: calc(300ms * var(--i));
+  width: 0;
+}
