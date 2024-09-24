@@ -76,3 +76,21 @@ section {
 .btn-box .btn:hover {
   color: var(--main-color);
 }
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 10rem 4% 2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 50%;
+  }
+}

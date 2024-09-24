@@ -99,3 +99,9 @@
   padding-top: 0.5rem;
   padding-left: 2rem;
 }
+
+@media (max-width: 462px) {
+  .education {
+    padding: 10rem 4% 5rem 5%;
+  }
+}

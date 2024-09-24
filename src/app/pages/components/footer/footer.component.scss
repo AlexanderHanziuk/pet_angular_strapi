@@ -54,3 +54,20 @@
 .footer-iconTop a:hover i {
   color: var(--main-color);
 }
+
+@media (max-width: 991px) {
+  .footer {
+    padding: 2rem 4%;
+  }
+}
+
+@media (max-width: 462px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
