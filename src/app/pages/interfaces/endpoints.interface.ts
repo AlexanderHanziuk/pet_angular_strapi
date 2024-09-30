@@ -3,4 +3,7 @@ export interface IEndpoints {
     about: string;
     aboutModal: string;
   };
+  educationSection: {
+    education: string;
+  };
 }

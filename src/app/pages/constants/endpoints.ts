@@ -5,4 +5,7 @@ export const ENDPOINTS: IEndpoints = {
     about: '/about',
     aboutModal: '/about-modals',
   },
+  educationSection: {
+    education: '/educations',
+  },
 };

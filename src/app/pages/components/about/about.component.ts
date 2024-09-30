@@ -41,7 +41,7 @@ export class AboutComponent implements OnInit, OnDestroy {
     this.mySubscriptionAboutModalData = this.aboutModal
       .getAboutModalData()
       .subscribe((res) => {
-        JSON.parse(JSON.stringify(res.body)).data.map((el: any) => {
+        JSON.parse(JSON.stringify(res.body)).data.forEach((el: any) => {
           this.modalData.push(el);
         });
       });

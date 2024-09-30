@@ -8,74 +8,19 @@
         Education<span class="animate scroll" style="--i: 2"></span>
       </h3>
       <div class="education-box">
-        <div class="education-content">
-          <div class="content">
-            <div class="year"><i class="bx bxs-calendar"></i> 2004 - 2013</div>
-            <h3>Junior Secondary Education - State School</h3>
-            <p>
-              I received my basic education in a regular school. I was most
-              attracted to computer science, history and English.
-            </p>
-          </div>
-        </div>
-        <div class="education-content">
-          <div class="content">
-            <div class="year"><i class="bx bxs-calendar"></i> 2004 - 2013</div>
-            <h3>Junior Secondary Education - State School</h3>
-            <p>
-              I received my basic education in a regular school. I was most
-              attracted to computer science, history and English.
-            </p>
-          </div>
-        </div>
-        <div class="education-content">
-          <div class="content">
-            <div class="year"><i class="bx bxs-calendar"></i> 2004 - 2013</div>
-            <h3>Junior Secondary Education - State School</h3>
-            <p>
-              I received my basic education in a regular school. I was most
-              attracted to computer science, history and English.
-            </p>
-          </div>
-        </div>
-        <div class="education-content">
-          <div class="content">
-            <div class="year"><i class="bx bxs-calendar"></i> 2013 - 2017</div>
-            <h3>High Education - Belarusian State Academy of Communication</h3>
-            <p>
-              I studied in the specialty technical operation of networks and
-              telecommunications. Here I first became acquainted with
-              programming and the programming language - C++.
-            </p>
-          </div>
-        </div>
-        <div class="education-content">
-          <div class="content">
-            <div class="year">
-              <i class="bx bxs-calendar"></i> 09.2022 - 12.2022
+        <div *ngFor="let el of educationData">
+          <div class="education-content">
+            <div class="content">
+              <div class="year">
+                <i class="bx bxs-calendar"></i>
+                {{ el.dateOfStart | slice : 0 : 4 }} -
+                {{ el.dateOfEnd | slice : 0 : 4 }}
+              </div>
+              <h3>{{ el.title }}</h3>
+              <p>
+                {{ el.description }}
+              </p>
             </div>
-            <h3>Training Course - IT-Academy</h3>
-            <p>
-              I decided to get serious about programming and make it a part of
-              my life, so I signed up for a course in Website Development using
-              HTML, CSS and JavaScript in IT-Academy. At this stage, I learned
-              how to layout websites and what front-end development is in
-              general.
-            </p>
-          </div>
-        </div>
-        <div class="education-content">
-          <div class="content">
-            <div class="year">
-              <i class="bx bxs-calendar"></i> 01.2023 - 05.2023
-            </div>
-            <h3>Training Course - IT-Academy</h3>
-            <p>
-              The second course in this institution, which is called
-              "Development of web applications in JavaScript." During this time,
-              I mastered the JavaScript programming language and learned how to
-              create complex UI interfaces and browser games.
-            </p>
           </div>
         </div>
         <span class="animate scroll" style="--i: 3"></span>
