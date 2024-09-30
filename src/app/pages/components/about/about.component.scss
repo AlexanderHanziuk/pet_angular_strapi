@@ -8,6 +8,79 @@
   padding-bottom: 6rem;
 }
 
+.about-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+.about-modal-box {
+  max-width: 500px;
+  padding: 30px;
+  z-index: 1;
+  margin: 30px 15px;
+  background: linear-gradient(var(--main-color), var(--bg-color));
+  border-radius: 0.6rem;
+  box-shadow: 8px 8px 21px 4px rgba(34, 60, 80, 0.18) inset;
+}
+
+.about-modal-box .heading span {
+  color: var(--bg-color);
+}
+
+.about-modal-box p {
+  font-size: 1.6rem;
+}
+
+.closeAboutModal {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  margin: 30px 30%;
+  background: var(--bg-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--main-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.closeAboutModal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--main-color);
+  z-index: -1;
+  transition: 500ms;
+}
+
+.closeAboutModal:hover {
+  color: var(--bg-color);
+}
+
+.closeAboutModal:hover::before {
+  width: 100%;
+}
+
 .about-img {
   position: relative;
   width: 25rem;
