@@ -31,53 +31,32 @@
         Experience<span class="animate scroll" style="--i: 5"></span>
       </h3>
       <div class="education-box">
-        <div class="education-content">
-          <div class="content">
-            <div class="year"><i class="bx bxs-calendar"></i> 2017 - 2023</div>
-            <h3>Production site foreman - Minskenergo</h3>
-            <h4>Main Responsibilities:</h4>
-            <ul>
-              <li>Maintenance of communication equipment</li>
-              <li>Programming and administration of telephone exchanges</li>
-              <li>
-                Development of software for monitoring telecommunications
-                networks
-              </li>
-              <li>Working with various databases</li>
-              <li>Setting up operating systems</li>
-            </ul>
-            <h4>Achievements:</h4>
-            <ul>
-              <li>Introduced a new way to administer telephone exchanges</li>
-              <li>I trained more than 10 young specialists</li>
-              <li>
-                Set up more than 20 programs for monitoring communications
-                networks
-              </li>
-              <li>Served more than 100 power system facilities</li>
-            </ul>
-          </div>
-        </div>
-        <div class="education-content">
-          <div class="content">
-            <div class="year"><i class="bx bxs-calendar"></i> 2023 - 2024</div>
-            <h3>Frontend Developer - Habdev</h3>
-            <h4>Main Responsibilities:</h4>
-            <ul>
-              <li>User interface development</li>
-              <li>Working with React components</li>
-              <li>
-                Interacting with the backend development team and designers
-              </li>
-              <li>Working with git</li>
-              <li>Participating in the discussion of new projects</li>
-            </ul>
-            <h4>Achievements:</h4>
-            <ul>
-              <li>Participated in the development of professional projects</li>
-              <li>Learned new technologies (Next.js, Tailwind CSS)</li>
-              <li>Worked in a development team</li>
-            </ul>
+        <div *ngFor="let el of experienceData; let i = index">
+          <div class="education-content">
+            <div class="content">
+              <div class="year">
+                <i class="bx bxs-calendar"></i>
+                {{ el.dateOfStart | slice : 0 : 4 }} -
+                {{ el.dateOfEnd | slice : 0 : 4 }}
+              </div>
+              <h3>{{ el.title }}</h3>
+              <h4>Main Responsibilities:</h4>
+              <ul *ngFor="let li of responsibilityData">
+                @if (i === 0 && li.number === 1) {
+                <li>{{ li.responsibility }}</li>
+                } @if (i === 1 && li.number === 2) {
+                <li>{{ li.responsibility }}</li>
+                }
+              </ul>
+              <h4>Achievements:</h4>
+              <ul *ngFor="let li of achievementData">
+                @if (i === 0 && li.number === 1) {
+                <li>{{ li.achievement }}</li>
+                } @if (i === 1 && li.number === 2) {
+                <li>{{ li.achievement }}</li>
+                }
+              </ul>
+            </div>
           </div>
         </div>
         <span class="animate scroll" style="--i: 6"></span>

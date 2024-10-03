@@ -7,5 +7,8 @@ export const ENDPOINTS: IEndpoints = {
   },
   educationSection: {
     education: '/educations',
+    experience: '/experiences',
+    responsibility: '/responsibilities',
+    achievement: '/achievements',
   },
 };

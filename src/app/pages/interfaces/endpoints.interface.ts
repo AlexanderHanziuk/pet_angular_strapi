@@ -5,5 +5,8 @@ export interface IEndpoints {
   };
   educationSection: {
     education: string;
+    experience: string;
+    responsibility: string;
+    achievement: string;
   };
 }

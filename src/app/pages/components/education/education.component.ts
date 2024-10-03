@@ -7,6 +7,9 @@ import {
 import { EducationService } from '../../services/education-service/education.service';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { ExperienceService } from '../../services/experience-service/experience.service';
+import { ResponsibilityService } from '../../services/responsibility-service/responsibility.service';
+import { AchievementService } from '../../services/achievement-service/achievement.service';
 
 @Component({
   selector: 'app-education',
@@ -18,9 +21,20 @@ import { Subscription } from 'rxjs';
 })
 export class EducationComponent implements OnInit, OnDestroy {
   public educationData: any[] = [];
-  public mySubscriptionEducation!: Subscription;
+  public experienceData: any[] = [];
+  public responsibilityData: any[] = [];
+  public achievementData: any[] = [];
+  private mySubscriptionEducation!: Subscription;
+  private mySubscriptionExperience!: Subscription;
+  private mySubscriptionResponsibility!: Subscription;
+  private mySubscriptionAchievement!: Subscription;
 
-  constructor(private readonly educationService: EducationService) {}
+  constructor(
+    private readonly educationService: EducationService,
+    private readonly experienceService: ExperienceService,
+    private readonly responsibilityService: ResponsibilityService,
+    private readonly achievementService: AchievementService
+  ) {}
 
   public ngOnInit(): void {
     this.mySubscriptionEducation = this.educationService
@@ -30,9 +44,36 @@ export class EducationComponent implements OnInit, OnDestroy {
           this.educationData.push(el);
         });
       });
+
+    this.mySubscriptionExperience = this.experienceService
+      .getExperienceData()
+      .subscribe((res) => {
+        JSON.parse(JSON.stringify(res.body)).data.forEach((el: any) => {
+          this.experienceData.push(el);
+        });
+      });
+
+    this.mySubscriptionResponsibility = this.responsibilityService
+      .getResponsibilityData()
+      .subscribe((res) => {
+        JSON.parse(JSON.stringify(res.body)).data.forEach((el: any) => {
+          this.responsibilityData.push(el);
+        });
+      });
+
+    this.mySubscriptionAchievement = this.achievementService
+      .getAchievementData()
+      .subscribe((res) => {
+        JSON.parse(JSON.stringify(res.body)).data.forEach((el: any) => {
+          this.achievementData.push(el);
+        });
+      });
   }
 
   public ngOnDestroy(): void {
     this.mySubscriptionEducation.unsubscribe();
+    this.mySubscriptionExperience.unsubscribe();
+    this.mySubscriptionResponsibility.unsubscribe();
+    this.mySubscriptionAchievement.unsubscribe();
   }
 }
