@@ -11,4 +11,8 @@ export const ENDPOINTS: IEndpoints = {
     responsibility: '/responsibilities',
     achievement: '/achievements',
   },
+  skillsSection: {
+    hardSkills: '/hards',
+    softSkills: '/softs',
+  },
 };

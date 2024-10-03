@@ -9,4 +9,8 @@ export interface IEndpoints {
     responsibility: string;
     achievement: string;
   };
+  skillsSection: {
+    hardSkills: string;
+    softSkills: string;
+  };
 }
