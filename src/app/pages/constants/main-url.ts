@@ -1,1 +1,2 @@
-export const MAIN_URL: string = 'http://localhost:1337/api';
+export const MAIN_URL: string =
+  'https://dynamic-cat-4166d933d5.strapiapp.com/api';
